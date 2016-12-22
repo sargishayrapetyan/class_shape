@@ -11,7 +11,7 @@ bool f(bool b)
 int main()
 {
     if (f(true)) {
-        std::cout << "asfdsff\n";
+        std::cout << "SMTH\n";
     }
 	return 0;
 }
