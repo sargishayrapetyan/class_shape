@@ -2,7 +2,6 @@
 #include <cmath>
 
 #include "Circle.h"
-
 using std::cout;
 
 Circle::Circle(const Point& crd, const int& rad)
@@ -39,6 +38,13 @@ double Circle::perimeter() const
 double Circle::area() const
 {
 	return 3.14 * pow(m_radius, 2);
+}
+
+void Circle::print() const
+{
+
+	std::cout << *this << std::endl;
+
 }
 
 std::ostream& operator<<(std::ostream& output, const Circle& circle)

@@ -5,9 +5,10 @@ class Point
 public:
 		Point();
 		Point(const double&, const double&);
+		Point& operator=(const Point& other);
 public:
 		bool operator==(const Point& other) const;
-        bool operator!=(const Point& other) const;
+	        bool operator!=(const Point& other) const;
 		Point operator-(const Point& other);
 public:
 		void set_x(double& x);

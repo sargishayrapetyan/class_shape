@@ -23,7 +23,7 @@ public:
 public:
 	virtual double area() const;
 	virtual double perimeter() const;
-
+	virtual void print() const;
 public:
 	bool operator==(const Rectangle& ohter) const;
 	bool operator!=(const Rectangle& ohter) const;

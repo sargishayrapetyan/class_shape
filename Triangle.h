@@ -6,11 +6,9 @@
 class Triangle : public Shape
 {
 public:
-	Triangle(const Point& crd1,
-             const Point& crd2,
-             const Point& crd3);
+	Triangle(const Point& crd1, const Point& crd2, const Point& crd3);
 	Triangle(const Triangle&) = default;
-    Triangle& operator=(const Triangle& other) = default;
+	Triangle& operator=(const Triangle& other) = default;
 
 public:
 	void set_left_crd(const Point& crd1);
@@ -27,6 +25,7 @@ public:
 public:
 	virtual double area() const;
 	virtual double perimeter() const;
+	virtual void print() const;
 
 public:
 	friend std::ostream& operator<<(std::ostream&, const Triangle&);

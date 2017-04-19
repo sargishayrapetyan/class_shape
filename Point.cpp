@@ -17,12 +17,22 @@ Point::Point(const double& x, const double& y)
 {
 }
 
+Point& Point::operator=(const Point& other)
+{
+	this->m_x = other.m_x;
+	this->m_y = other.m_y;
+	
+	return *this;
+}
+
+
 Point Point::operator-(const Point& other)
 {
-	m_x -= other.m_x;
-	m_y -= other.m_y;
+	Point temp;
+	temp.m_x = this->m_x - other.m_x;
+	temp.m_y = this->m_y - other.m_y;
 
-	return *this;
+	return temp;
 }
 
 bool Point::operator==(const Point& other) const

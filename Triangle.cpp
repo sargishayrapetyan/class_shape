@@ -2,6 +2,7 @@
 #include <cmath>
 
 #include "Triangle.h"
+
 Triangle::Triangle(const Point& crd1, const Point& crd2, const Point& crd3)
 {
 	if (are_valid_triangle_crds(crd1, crd2, crd3)) {
@@ -91,6 +92,15 @@ double Triangle::perimeter() const
 	return (a + b + c);
 }
 
+
+void Triangle::print() const
+{
+
+	std::cout << *this << std::endl;
+
+}
+
+
 std::ostream& operator<<(std::ostream& os, const Triangle& triangle)
 {
 	os << "m_left_crd =" <<'('<< triangle.m_left_crd.get_x() <<
@@ -106,7 +116,7 @@ bool Triangle::are_valid_triangle_crds(const Point& left, const Point& high, con
 {
 
 	return (((left.get_x() - high.get_x()) * 
-				(high.get_y() - right.get_y())) ==
+				(high.get_y() - right.get_y())) !=
 			((high.get_x() - right.get_x()) * 
 			 (left.get_y() - high.get_y())));
 

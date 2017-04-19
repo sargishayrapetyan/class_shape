@@ -53,6 +53,13 @@ double Rectangle::perimeter() const
 		(2 * this->get_height()));
 }
 
+void Rectangle::print() const
+{
+
+	std::cout << *this << std::endl;
+
+}
+
 std::ostream& operator<<(std::ostream& os, const Rectangle& rectangle)
 {
 	os << "m_left_low_crd =" <<'(' <<rectangle.m_left_low_crd.get_x()<<

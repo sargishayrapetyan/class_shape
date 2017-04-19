@@ -7,8 +7,8 @@ class Circle : public Shape
 {	
 public:
 	Circle(const Point& crd, const int& rad);
-	Circle(const Circle &) = default;
-    Circle& operator=(const Circle&) = default;
+	Circle(const Circle&) = default;
+	Circle& operator=(const Circle&) = default;
 
 public:
 	void set_radius(const int& rad);
@@ -20,7 +20,7 @@ public:
 public:
 	virtual double area() const;
 	virtual double perimeter() const;
-
+	virtual void print() const;
 public:
 	bool operator==(const Circle& other) const;
 	bool operator!=(const Circle& other) const;
