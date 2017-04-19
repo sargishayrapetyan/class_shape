@@ -1,1 +1,0 @@
-main.o: main.cpp Point.h Rectangle.h Shape.h
